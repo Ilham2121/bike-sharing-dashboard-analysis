@@ -122,6 +122,14 @@ plt.ylabel('Rata-rata Jumlah Sepeda yang Disewa')
 plt.grid(True)
 st.pyplot(plt)
 
+# Visualisasi pengguna berdasarkan musim
+st.subheader("Penyewaan Berdasarkan Musim")
+season_label = {1: 'Spring', 2: 'Summer', 3: 'Fall', 4: 'Winter'}
+main_df['season_label'] = main_df['season'].replace(season_label)
+fig, ax = plt.subplots(figsize=(8, 4))
+sns.barplot(x='season_label', y='Count', data=main_df, palette='Set2', ci=None, ax=ax)
+st.pyplot(fig)
+
 st.header("Analisis Tambahan")
 # Membuat visualisasi sewa bulanan
 st.subheader('Jumlah Penyewaan Bulanan')
@@ -131,13 +139,6 @@ ax.plot(monthly_rent.index, monthly_rent.values, marker='o', color='blue')
 plt.xticks(rotation=45)
 st.pyplot(fig)
 
-# Visualisasi pengguna berdasarkan musim
-st.subheader("Penyewaan Berdasarkan Musim")
-season_label = {1: 'Spring', 2: 'Summer', 3: 'Fall', 4: 'Winter'}
-main_df['season_label'] = main_df['season'].replace(season_label)
-fig, ax = plt.subplots(figsize=(8, 4))
-sns.barplot(x='season_label', y='Count', data=main_df, palette='Set2', ci=None, ax=ax)
-st.pyplot(fig)
 
 # Informasi footer
 st.markdown("---")
