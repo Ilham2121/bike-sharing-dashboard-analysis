@@ -23,7 +23,7 @@ Anda bisa menginstall semua dependensi melalui `requirements.txt` (jika ada) ata
    ```bash
    git clone https://github.com/Ilham2121/bike-sharing-dashboard-analysis
 
-   cd "repository-name"
+   cd bike-sharing-dashboard-analysis
 
    pip install -r requirements.txt
 
@@ -31,3 +31,7 @@ Anda bisa menginstall semua dependensi melalui `requirements.txt` (jika ada) ata
 Untuk menjalankan dashboard, gunakan perintah berikut:
 
     streamlit run dashboard.py
+
+## Hasil akhir dashboard
+
+   https://bike-sharing-dashboard-analysis.streamlit.app/
